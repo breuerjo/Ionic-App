@@ -1,17 +1,38 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to TEST_JONAS:Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-grid>
+      <img src="http://125jahre-kfv-se.org/fileadmin/user_upload/bilder-seitenkopf/mp-feuer.jpg" class="picture"/>
+      <h2 class="header">  MP-Feuer</h2>
+      <h3 class="header">PER - Ihr Infosystem</h3>
+      <ion-list inset>
+
+        <ion-item>
+          <ion-label>Organisations-ID</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Benutzername</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Passwort</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+
+        <ion-row>
+          <ion-checkbox  olor="dark" checked="false"></ion-checkbox>
+          <ion-label>Datenschutzerklärung akzeptieren</ion-label>
+        </ion-row>
+          
+
+        
+      
+      </ion-list>
+      <button ion-button class="button" >Einloggen</button>
+  </ion-grid>
 </ion-content>
