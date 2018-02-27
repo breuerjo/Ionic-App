@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, App } from 'ionic-angular';
+import { StartPage } from '../start/start';
+import { AngularFireAuth } from 'angularfire2/auth';
+
 
 @Component({
   selector: 'page-home',
@@ -7,9 +10,17 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  email: string;
 
+  constructor(public navCtrl: NavController, public app: App, private fire: AngularFireAuth) {
+    this.email = fire.auth.currentUser.email
   }
-  newFunktion () {}
+  logout() {
+    //APi-Token
+    const root = this.app.getRootNav();       //speichern der Root-Page
+    root.popToRoot();
+    //this.navCtrl.push(StartPage);
+  }
+  
 
 }

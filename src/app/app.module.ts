@@ -2,6 +2,12 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { FlexLayoutModule} from '@angular/flex-layout';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireStorageModule } from 'angularfire2/storage';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
@@ -11,6 +17,16 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { StartPage } from '../pages/start/start';
+
+const firebaseAuth = {                                            //FIREBASE
+  apiKey: "AIzaSyChuFfXEpK7CQscJqAnkrL5aDwnECA5ipQ",
+  authDomain: "ionic-app-af8f5.firebaseapp.com",
+  databaseURL: "https://ionic-app-af8f5.firebaseio.com",
+  projectId: "ionic-app-af8f5",
+  storageBucket: "ionic-app-af8f5.appspot.com",
+  messagingSenderId: "1048625200746"
+};
 
 @NgModule({
   declarations: [
@@ -18,12 +34,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    StartPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    FlexLayoutModule
+    FlexLayoutModule,
+    AngularFireModule.initializeApp(firebaseAuth),
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -31,7 +52,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    StartPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,67 @@
+
+<ion-header>
+  
+</ion-header>
+
+<ion-content class="no_margin">
+  <ion-grid class="no_margin">
+
+    <ion-row class="no_margin">   
+      <img src="http://125jahre-kfv-se.org/fileadmin/user_upload/bilder-seitenkopf/mp-feuer.jpg" class="picture"/>
+    </ion-row>
+
+
+    <ion-row class="margin">
+      <ion-col>
+        <h1 class="header"> MP-Feuer</h1>
+        <h2 class="header2">PER - Ihr Infosystem</h2>
+     </ion-col>
+      
+    </ion-row>
+      
+    <ion-row class="margin">
+      <ion-col>
+        <ion-list >
+        	
+            <ion-item class="item_no_padding">
+              <ion-label stacked >Organisations-ID: </ion-label>
+              <ion-input type="text" #orgid></ion-input>
+            </ion-item>
+
+            <ion-item class="item_no_padding">
+                <ion-label stacked >Benutzername: </ion-label>
+              <ion-input type="text" #uname></ion-input>
+            </ion-item>
+
+            <ion-item class="item_no_padding">
+               <ion-label stacked >Passwort: </ion-label>
+               <ion-input type="password" #password></ion-input>
+            </ion-item>
+                
+            </ion-list>
+         </ion-col>
+
+    </ion-row>  
+
+    <ion-row class="margin">
+      <ion-col col-1 fxLayoutAlign="left center" >
+        <ion-checkbox  color="dark" checked="false" >
+        </ion-checkbox>
+      </ion-col>
+
+      <ion-col id="col_no_padding">
+        <ion-label >Datenschutzerklärung akzeptieren</ion-label>
+      </ion-col>
+      
+    </ion-row>
+    
+      
+    <ion-row class="margin">
+
+      <ion-col>
+        <button ion-button class="button_max_width" (click)="login()">Einloggen</button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>
