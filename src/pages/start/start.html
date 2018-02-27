@@ -3,8 +3,8 @@
   
 </ion-header>
 
-<ion-content class="no_margin">
-  <ion-grid class="no_margin">
+<ion-content class="no_padding_margin">
+  <ion-grid class="no_padding_margin">
 
     <ion-row class="no_margin">   
       <img src="http://125jahre-kfv-se.org/fileadmin/user_upload/bilder-seitenkopf/mp-feuer.jpg" class="picture"/>
@@ -49,8 +49,8 @@
         </ion-checkbox>
       </ion-col>
 
-      <ion-col id="col_just_padding_left">
-        <ion-label >Datenschutzerklärung akzeptieren</ion-label>
+      <ion-col class="no_padding_margin">
+        <ion-label font-size="50px" >Datenschutzerklärung akzeptieren</ion-label>
       </ion-col>
       
     </ion-row>
@@ -63,29 +63,25 @@
       </ion-col>
 
     </ion-row>
+
+    <ion-row class="no_padding_margin">
+
+        <ion-col class="no_padding_margin">
+            <button ion-button color="light" class="button_max_width no_padding_margin max_height"  fxLayoutAlign="center center" (click)="hilfe()">Hilfe</button>
+        </ion-col>
+
+        <ion-col class="no_padding_margin">
+            <button ion-button color="light" class="button_max_width no_padding_margin max_height" fxLayoutAlign="center center" (click)="datenschutz()">Datenschutz</button>
+        </ion-col>
+
+        <ion-col class="no_padding_margin" height="100%">
+            <button  ion-button color="light"   class="button_max_width no_padding_margin max_height" fxLayoutAlign="center center" (click)="impressum()">Impressum</button>
+        </ion-col>
+      </ion-row>
+
+
   </ion-grid>
 </ion-content>
 
 
-<ion-footer>
-  
-    <ion-grid class="no_padding_margin">
-      <ion-toolbar class="no_padding_margin">
 
-      
-        <ion-row >
-          <ion-col class="no_padding_margin">
-              <button ion-button color="light" class="button_max_width" fxLayoutAlign="center center" (click)="hilfe()">Hilfe</button>
-          </ion-col>
-
-          <ion-col class="no_padding_margin">
-              <button ion-button color="light" class="button_max_width" fxLayoutAlign="center center" (click)="datenschutz()">Datenschutz</button>
-          </ion-col>
-
-          <ion-col class="no_padding_margin">
-              <button ion-button color="light" class="button_max_width" fxLayoutAlign="center center" (click)="impressum()">Impressum</button>
-            </ion-col>
-        </ion-row>
-      </ion-toolbar>  
-    </ion-grid>
-</ion-footer>

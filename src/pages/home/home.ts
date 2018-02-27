@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, App } from 'ionic-angular';
-import { StartPage } from '../start/start';
+//import { StartPage } from '../start/start';
 import { AngularFireAuth } from 'angularfire2/auth';
 
 

@@ -12,7 +12,7 @@ page-start {
      .header {
          color: #dd0c0c;
          font-family: "azo-sans-web",sans-serif;
-         font-size: 50px;
+         font-size: 40px;
          font-weight: bold;
          margin-top: 0px;
          padding-top: 0px;
@@ -20,39 +20,42 @@ page-start {
        .header2 {
          color: #dd0c0c;
          font-family: "azo-sans-web",sans-serif;
-         font-size: 35px;
+         font-size: 25px;
          font-weight: bold;
          margin-top: 10px;
          padding-top: 10px;
        }
+
+       .label-md[stacked] {         //Input-Labels
+        font-size: 17px;
+    }
+        .label-ios[stacked] {
+        margin-bottom: 4px;
+        font-size: 17px;
+        }
      
       .no_padding_margin {
-          padding:0px;
+          padding: 0px;
           margin: 0px;
       } 
      .button_max_width {
          width: 100%;
      }
-     .no_margin {
-         margin: none;
+
+     .max_height {              //max height for toolbar-conten in footer!
+         height: 30px;
      }
-     
+     .no_margin {
+         margin: 0px;
+     }
      
      .margin {
          margin: 20px;
      }
-     
-     
-     #col_just_padding_left {   //für Entfernen padding bei col für Datenschutzerklärung-Label
-         
-             padding-left: 20px;
-             position: relative;
-             width: 100%;
-             margin: 0;
-             min-height: 1px;
-             flex-basis: 0;
-             flex-grow: 1;
-             max-width: 100%;
-         
+
+     .toolbar-content-md {
+         height: 100%;
      }
+     
+     
 }
