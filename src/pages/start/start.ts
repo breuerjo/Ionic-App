@@ -2,8 +2,12 @@ import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 import { TabsPage } from '../tabs/tabs';
+import { ImpressumPage } from '../impressum/impressum';
+import { HilfePage } from '../hilfe/hilfe';
+import { DatenschutzPage } from '../datenschutz/datenschutz';
 
 import { AngularFireAuth } from 'angularfire2/auth';
+
 
 @IonicPage()
 @Component({
@@ -12,9 +16,11 @@ import { AngularFireAuth } from 'angularfire2/auth';
 })
 export class StartPage {
 
-    @ViewChild('orgid') org_id;
     @ViewChild('uname') uname;
     @ViewChild('password') password;
+
+    org_id: String;
+    cb_status: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private fire: AngularFireAuth) {
   }
@@ -33,35 +39,51 @@ export class StartPage {
     }
 
   login() {
+
+
     this.fire.auth.signInWithEmailAndPassword(this.uname.value, this.password.value)
     .then (data => {      //erfolgreich eingeloggt/authentiziert
+      if(this.org_id==null){    
+        this.alert('Bitte geben Sie die Organisations-ID ein')
+      }
+      else {
+        console.log(this.org_id);
 
-      console.log('got some data', this.fire.auth.currentUser);
-      this.alert('Successfull logged in')
-      //user is logged in
-      this.navCtrl.push(TabsPage);
+        if(this.cb_status==true) {   //Datenschutzrichtlinien akzeptiert?
+          
+          //console.log('got some data', this.fire.auth.currentUser);
+          this.alert('Successfull logged in')
+          //user is logged in
+          this.navCtrl.push(TabsPage);
+        }
+        else {
+          this.alert('Bitte akzeptieren Sie die Datenschutzerlärung')
+        }
+      }
     })
     
     .catch( error => {
-      console.log('got an error', error)    //Error ausgeben
+      //console.log('got an error', error)    //Error ausgeben
       this.alert(error.message)
     })
     
     
-    
-    /*if(this.org_id.value=="123" && this.uname.value=="admin" && this.password.value=="admin") {
-      
-      let alert = this.alertCtrl.create({
-        title: 'Login Successfull!',
-        subTitle: 'You are logged in',
-        buttons: ['OK']
-      });
-      alert.present();
-      
-    }*/
+  }
 
-     
-    
+  updateCB() {
+    console.log('new state:' + this.cb_status);
+  }
+
+  hilfe() {
+    this.navCtrl.push(HilfePage);
+  }
+
+  datenschutz() {
+    this.navCtrl.push(DatenschutzPage);
+  }
+
+  impressum() {
+    this.navCtrl.push(ImpressumPage);
   }
 
 }

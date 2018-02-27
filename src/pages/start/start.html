@@ -23,17 +23,17 @@
       <ion-col>
         <ion-list >
         	
-            <ion-item class="item_no_padding">
+            <ion-item class="no_padding_margin">
               <ion-label stacked >Organisations-ID: </ion-label>
-              <ion-input type="text" #orgid></ion-input>
+              <ion-input type="text" #orgid [(ngModel)]="org_id"></ion-input>
             </ion-item>
 
-            <ion-item class="item_no_padding">
+            <ion-item class="no_padding_margin">
                 <ion-label stacked >Benutzername: </ion-label>
               <ion-input type="text" #uname></ion-input>
             </ion-item>
 
-            <ion-item class="item_no_padding">
+            <ion-item class="no_padding_margin">
                <ion-label stacked >Passwort: </ion-label>
                <ion-input type="password" #password></ion-input>
             </ion-item>
@@ -45,11 +45,11 @@
 
     <ion-row class="margin">
       <ion-col col-1 fxLayoutAlign="left center" >
-        <ion-checkbox  color="dark" checked="false" >
+        <ion-checkbox  checked="false"  [(ngModel)]="cb_status" (ionChange)="updateCB()" >
         </ion-checkbox>
       </ion-col>
 
-      <ion-col id="col_no_padding">
+      <ion-col id="col_just_padding_left">
         <ion-label >Datenschutzerklärung akzeptieren</ion-label>
       </ion-col>
       
@@ -65,3 +65,27 @@
     </ion-row>
   </ion-grid>
 </ion-content>
+
+
+<ion-footer>
+  
+    <ion-grid class="no_padding_margin">
+      <ion-toolbar class="no_padding_margin">
+
+      
+        <ion-row >
+          <ion-col class="no_padding_margin">
+              <button ion-button color="light" class="button_max_width" fxLayoutAlign="center center" (click)="hilfe()">Hilfe</button>
+          </ion-col>
+
+          <ion-col class="no_padding_margin">
+              <button ion-button color="light" class="button_max_width" fxLayoutAlign="center center" (click)="datenschutz()">Datenschutz</button>
+          </ion-col>
+
+          <ion-col class="no_padding_margin">
+              <button ion-button color="light" class="button_max_width" fxLayoutAlign="center center" (click)="impressum()">Impressum</button>
+            </ion-col>
+        </ion-row>
+      </ion-toolbar>  
+    </ion-grid>
+</ion-footer>

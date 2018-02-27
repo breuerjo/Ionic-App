@@ -14,10 +14,14 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { StartPage } from '../pages/start/start';
+import { HilfePage } from '../pages/hilfe/hilfe';
+import { DatenschutzPage } from '../pages/datenschutz/datenschutz';
+import { ImpressumPage } from '../pages/impressum/impressum';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { StartPage } from '../pages/start/start';
+
 
 const firebaseAuth = {                                            //FIREBASE
   apiKey: "AIzaSyChuFfXEpK7CQscJqAnkrL5aDwnECA5ipQ",
@@ -35,7 +39,10 @@ const firebaseAuth = {                                            //FIREBASE
     ContactPage,
     HomePage,
     TabsPage,
-    StartPage
+    StartPage,
+    HilfePage,
+    DatenschutzPage,
+    ImpressumPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +60,10 @@ const firebaseAuth = {                                            //FIREBASE
     ContactPage,
     HomePage,
     TabsPage,
-    StartPage
+    StartPage,
+    HilfePage,
+    DatenschutzPage,
+    ImpressumPage
   ],
   providers: [
     StatusBar,
