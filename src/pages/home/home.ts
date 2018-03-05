@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, App } from 'ionic-angular';
 import { StartPage } from '../start/start';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { StartPage } from '../start/start';
 
 
 @Component({
@@ -18,9 +19,16 @@ export class HomePage {
   }
   logout() {
     //APi-Token
+<<<<<<< HEAD
     //const root = this.app.getRootNav();       //speichern der Root-Page
     //root.popToRoot();
     this.navCtrl.push(StartPage);
+=======
+    
+    const root = this.app.getRootNav();       //speichern der Root-Page
+    root.popToRoot();
+    //this.navCtrl.push(StartPage);
+>>>>>>> 94b68fb341351427b48108000875272eb8562e58
   }
   
 
