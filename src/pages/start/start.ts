@@ -7,6 +7,7 @@ import { HilfePage } from '../hilfe/hilfe';
 import { DatenschutzPage } from '../datenschutz/datenschutz';
 
 import { AngularFireAuth } from 'angularfire2/auth';
+import { HomePage } from '../home/home';
 
 
 @IonicPage()
@@ -41,31 +42,32 @@ export class StartPage {
   login() {
 
 
-    this.fire.auth.signInWithEmailAndPassword(this.uname.value, this.password.value)
-    .then (data => {      //erfolgreich eingeloggt/authentiziert
-      if(this.org_id==null){    
-        this.alert('Bitte geben Sie die Organisations-ID ein')
-      }
-      else {
+    //this.fire.auth.signInWithEmailAndPassword(this.uname.value, this.password.value)
+    //.then (data => {      //erfolgreich eingeloggt/authentiziert
+      //if(this.org_id==null){    
+        //this.alert('Bitte geben Sie die Organisations-ID ein')
+      //}
+      //else {
         console.log(this.org_id);
 
-        if(this.cb_status==true) {   //Datenschutzrichtlinien akzeptiert?
+        //if(this.cb_status==true) {   //Datenschutzrichtlinien akzeptiert?
           
           //console.log('got some data', this.fire.auth.currentUser);
-          this.alert('Successfull logged in')
+          //this.alert('Successfull logged in')
           //user is logged in
-          this.navCtrl.push(TabsPage);
-        }
-        else {
-          this.alert('Bitte akzeptieren Sie die Datenschutzerlärung')
-        }
-      }
-    })
+          this.navCtrl.setRoot(HomePage);
+          this.navCtrl.popToRoot;
+      //  }
+        //else {
+         // this.alert('Bitte akzeptieren Sie die Datenschutzerlärung')
+        //}
+      //}
+   // })
     
-    .catch( error => {
+    /*.catch( error => {
       //console.log('got an error', error)    //Error ausgeben
       this.alert(error.message)
-    })
+    })*/
     
     
   }

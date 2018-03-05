@@ -18,6 +18,8 @@ import { StartPage } from '../pages/start/start';
 import { HilfePage } from '../pages/hilfe/hilfe';
 import { DatenschutzPage } from '../pages/datenschutz/datenschutz';
 import { ImpressumPage } from '../pages/impressum/impressum';
+import { InfoPage } from '../pages/info/info';
+import { NachrichtenPage } from '../pages/nachrichten/nachrichten';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -42,7 +44,9 @@ const firebaseAuth = {                                            //FIREBASE
     StartPage,
     HilfePage,
     DatenschutzPage,
-    ImpressumPage
+    ImpressumPage,
+    InfoPage,
+    NachrichtenPage
   ],
   imports: [
     BrowserModule,
@@ -63,7 +67,9 @@ const firebaseAuth = {                                            //FIREBASE
     StartPage,
     HilfePage,
     DatenschutzPage,
-    ImpressumPage
+    ImpressumPage,
+    InfoPage,
+    NachrichtenPage
   ],
   providers: [
     StatusBar,
