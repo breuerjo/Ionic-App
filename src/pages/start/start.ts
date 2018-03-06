@@ -53,7 +53,6 @@ export class StartPage {
   login() {
 
 
-<<<<<<< HEAD
     //this.fire.auth.signInWithEmailAndPassword(this.uname.value, this.password.value)
     //.then (data => {      //erfolgreich eingeloggt/authentiziert
       //if(this.org_id==null){    
@@ -75,39 +74,6 @@ export class StartPage {
         //}
       //}
    // })
-=======
-    this.fire.auth.signInWithEmailAndPassword(this.uname.value, this.password.value)
-    .then (data => {      //erfolgreich eingeloggt/authentiziert
-
-      if (this.org_id==null && this.cb_status!=true) {     //Cb + Orgid nicht eingetragen
-        this.alert('Bitte geben Sie die Organisations-ID ein und akzeptieren Sie die Datenschutzerlärung')
-      }
-      else if(this.org_id==null){    
-        this.alert('Bitte geben Sie die Organisations-ID ein')
-      }
-      else {
-        console.log(this.org_id);
-
-        if(this.cb_status==true) {   //Datenschutzrichtlinien akzeptiert?
-
-          if(this.loggid_in!=true){
-            this.loggid_in=true;
-            //console.log('got some data', this.fire.auth.currentUser);
-            this.alert('Successfull logged in')
-            //user is logged in
-            this.navCtrl.push(TabsPage);
-          }
-          else{
-
-          }
-         
-        }
-        else {
-          this.alert('Bitte akzeptieren Sie die Datenschutzerlärung')
-        }
-      }
-    })
->>>>>>> 94b68fb341351427b48108000875272eb8562e58
     
     /*.catch( error => {
       //console.log('got an error', error)    //Error ausgeben

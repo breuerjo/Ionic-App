@@ -19,6 +19,7 @@ import { HilfePage } from '../pages/hilfe/hilfe';
 import { DatenschutzPage } from '../pages/datenschutz/datenschutz';
 import { ImpressumPage } from '../pages/impressum/impressum';
 import { InfoPage } from '../pages/info/info';
+import { PopoverAbtPage } from '../pages/popover-abt/popover-abt';
 import { NachrichtenPage } from '../pages/nachrichten/nachrichten';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -46,7 +47,8 @@ const firebaseAuth = {                                            //FIREBASE
     DatenschutzPage,
     ImpressumPage,
     InfoPage,
-    NachrichtenPage
+    NachrichtenPage,
+    PopoverAbtPage
   ],
   imports: [
     BrowserModule,
@@ -69,7 +71,8 @@ const firebaseAuth = {                                            //FIREBASE
     DatenschutzPage,
     ImpressumPage,
     InfoPage,
-    NachrichtenPage
+    NachrichtenPage,
+    PopoverAbtPage
   ],
   providers: [
     StatusBar,

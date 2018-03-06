@@ -8,7 +8,9 @@ import { HomePage } from '../pages/home/home';
 import { ImpressumPage } from '../pages/impressum/impressum';
 import { InfoPage } from '../pages/info/info';
 import { NachrichtenPage } from '../pages/nachrichten/nachrichten';
+
 import { AngularFireAuth } from 'angularfire2/auth';
+
 
 @Component({
   templateUrl: 'app.html'
